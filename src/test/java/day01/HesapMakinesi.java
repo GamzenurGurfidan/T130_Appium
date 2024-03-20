@@ -1,3 +1,5 @@
+package day01;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -51,8 +53,9 @@ public class HesapMakinesi {
 
         // 400 un 3 katininin 1200 oldugunu hesap makinasindan dogrulayalim
         driver.findElementByAccessibilityId("4").click();
-        driver.findElementByAccessibilityId("0").click();
-        driver.findElementByAccessibilityId("0").click();
+        for (int i = 0; i < 2; i++){
+            driver.findElementByAccessibilityId("0").click();
+        }
 
         driver.findElementByAccessibilityId("multiply").click();
 
